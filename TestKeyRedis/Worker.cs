@@ -85,6 +85,7 @@ namespace TestKeyRedis
             }
             if (result != null && result.Any())
             {
+                File.WriteAllLines(@"/home/ubuntu/TestBot/reportData.txt", result);
                 PublishhMessage(string.Join("\n", result.Distinct().ToArray()));
             }
         }
